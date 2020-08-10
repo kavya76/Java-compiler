@@ -1,0 +1,21 @@
+a	=	1
+b	=	4
+$L1:
+$t1	=	a	<	3
+if( not $t1)	goto $L2
+$t2	=	a	>	b
+	if( not $t2)	goto $L3
+a	=	b
+		goto $L4
+$L3: 
+c	=	d
+$L4: 
+$t5	=	p	*	q
+$t2	=	a	+	b
+$t3	=	c	*	$t2
+$t4	=	$t5	+	$t3
+d	=	$t4
+$t1	=	a	+	1
+a	=	$t1
+		goto $L1
+$L2: 
